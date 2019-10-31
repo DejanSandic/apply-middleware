@@ -1,0 +1,19 @@
+{
+	"name": "apply-middleware",
+	"version": "1.0.0",
+	"description": "Apply any number of middleware functions to any function",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DejanSandic/apply-middleware.git"
+	},
+	"author": "Dejan Sandic - Deyo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/DejanSandic/apply-middleware/issues"
+	},
+	"homepage": "https://github.com/DejanSandic/apply-middleware#readme"
+}
