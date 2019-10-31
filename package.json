@@ -1,6 +1,6 @@
 {
 	"name": "apply-middleware",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Apply any number of middleware functions to any function",
 	"main": "index.js",
 	"scripts": {
