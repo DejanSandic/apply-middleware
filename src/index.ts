@@ -2,16 +2,11 @@ export type Next = (...newArgs: any[]) => void;
 
 export type Middleware = (next: Next, ...args: any[]) => void;
 
-export default function applyMiddleware (
-   target: Function,
-   ...middlewares: Middleware[]
-) {
+export default function applyMiddleware (target: Function, ...middlewares: Middleware[]) {
    // Verify all arguments passed to the the applyMiddleware function are functions
    for (const arg of arguments) {
       if (typeof arg !== 'function') {
-         throw new Error(
-            'All arguments passed to the applyMiddleware function need to be functions.'
-         );
+         throw new Error('All arguments passed to the applyMiddleware function need to be functions.');
       }
    }
 

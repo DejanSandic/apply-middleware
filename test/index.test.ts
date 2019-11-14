@@ -29,13 +29,8 @@ test('applyMiddleware should invoke the target function with data modified by th
    const num: any = 11;
 
    const fn1 = () => applyMiddleware(num, addOne);
-   expect(fn1).toThrowError(
-      'All arguments passed to the applyMiddleware function need to be functions.'
-   );
+   expect(fn1).toThrowError('All arguments passed to the applyMiddleware function need to be functions.');
 
-   const fn2 = () =>
-      applyMiddleware(target, addOne, doNothing, num, addDecimal);
-   expect(fn2).toThrowError(
-      'All arguments passed to the applyMiddleware function need to be functions.'
-   );
+   const fn2 = () => applyMiddleware(target, addOne, doNothing, num, addDecimal);
+   expect(fn2).toThrowError('All arguments passed to the applyMiddleware function need to be functions.');
 });
