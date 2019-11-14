@@ -4,7 +4,7 @@
 	"description": "Apply any number of middleware functions to any function",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.es.js",
-	"umd": "dist/index.umd.js",
+	"unpkg": "dist/index.umd.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"test": "jest",
