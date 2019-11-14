@@ -11,7 +11,8 @@
 		"declarationDir": "dist",
 		"noImplicitAny": true,
 		"esModuleInterop": true,
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"downlevelIteration":true
 	},
 	"files": ["./src/index.ts"]
 }
