@@ -1,5 +1,7 @@
 import typescript from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
+import license from 'rollup-plugin-license';
+import path from 'path';
 
 export default {
 	input: 'src/index.ts',
@@ -20,9 +22,19 @@ export default {
 			file: 'dist/index.umd.js',
 			format: 'umd',
 			sourcemap: 'inline',
-			globals: {},
-			plugins: [ terser() ]
+			globals: {}
 		}
 	],
-	plugins: [ typescript({ clean: true }) ]
+	plugins: [
+		typescript({ clean: true }),
+		terser({ include: [ /^.+\.umd\.js$/ ] }),
+		license({
+			banner: {
+				content: {
+					file: path.join(__dirname, 'licence'),
+					encoding: 'utf-8'
+				}
+			}
+		})
+	]
 };

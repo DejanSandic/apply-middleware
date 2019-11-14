@@ -3,8 +3,9 @@
 	"version": "1.0.1",
 	"description": "Apply any number of middleware functions to any function",
 	"main": "dist/index.cjs.js",
-	"browser": "dist/index.umd.js",
 	"module": "dist/index.es.js",
+	"umd": "dist/index.umd.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"test": "jest",
 		"prebuild": "rimraf dist",
@@ -12,10 +13,7 @@
 		"dev": "rollup --config --watch",
 		"lint:fix": "prettier-eslint \"src/*\" \"test/*\" --write"
 	},
-	"pre-commit": [
-		"test",
-		"lint:fix"
-	],
+	"pre-commit": [ "test", "lint:fix" ],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/DejanSandic/apply-middleware.git"
@@ -41,6 +39,7 @@
 		"rimraf": "^2.6.3",
 		"rollup": "^1.15.6",
 		"rollup-plugin-babel": "^4.3.2",
+		"rollup-plugin-license": "^0.12.1",
 		"rollup-plugin-terser": "^5.0.0",
 		"rollup-plugin-typescript2": "^0.22.0",
 		"ts-jest": "^24.0.2",
